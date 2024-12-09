@@ -4,6 +4,7 @@ import Collections from './Collections';
 import Layout from './Layout';
 import PopularCategories from './PopularCategories';
 import FeatureItems from './FeatureItems';
+import Banner from './Banner';
 
 
 function Pages() {
@@ -11,6 +12,7 @@ function Pages() {
   return (
     <>
       <Layout>
+        <Banner/>
         <FeatureItems/>
         <ProductList/>
         <PopularCategories/>

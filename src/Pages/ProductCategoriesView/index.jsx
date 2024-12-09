@@ -8,13 +8,12 @@ export default function ProductCategoryView() {
   return (
     <>
       <Layout>
-        {JSON.stringify(params)}
         <section className="py-12 bg-gray-50 sm:py-16 lg:py-20">
           <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div className="md:flex md:items-end md:justify-between">
               <div className="sm:max-w-md">
                 <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">
-                  New Items
+                 {params.type.toLocaleUpperCase()}
                 </h1>
                 <p className="mt-4 text-base font-normal leading-7 text-gray-600">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus
@@ -153,7 +152,7 @@ export default function ProductCategoryView() {
 
               <div className="lg:col-span-3">
                 <div className="bg-white border-2 border-gray-200 border-dashed rounded-md h-96 lg:h-full">
-                  <Products />
+                  <Products type={params.type} />
                 </div>
               </div>
             </div>

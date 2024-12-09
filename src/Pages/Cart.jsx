@@ -1,10 +1,14 @@
 import { useNavigate } from "react-router";
 import PriceLabel from "../Component/PriceLabel";
-import { CartItems } from "../utlis/content";
+import { CartItems, AllProducts } from "../utlis/content";
 import Layout from "./Layout";
 
+const parsePrice = (price) => parseFloat(price.replace(/[₹,]/g, ""));
+
 export default function Cart() {
-    const subtotal = CartItems.reduce((total, item) => total + item.price * item.no_of_items, 0);
+    let filteredProduct = [];
+    
+    const subtotal = AllProducts.reduce((total, item) => total + parsePrice(item.price), 0);
     const tax = 0; 
     const shipping = 10;
     const total = subtotal + tax + shipping;
@@ -13,6 +17,7 @@ export default function Cart() {
     const handleCheckOut = () => {
         navigation('/checkout');
     }
+    filteredProduct = AllProducts.slice(3, 8);
     return (<>
     <Layout>
     <section className="py-12 bg-white sm:py-16 lg:py-20">
@@ -30,9 +35,9 @@ export default function Cart() {
 
                     <div className="flow-root mt-7">
                         <ul className="divide-y divide-gray-200 -my-7">
-                            {CartItems.map((product)=>(<li key={product.id} className="flex py-7">
+                            {filteredProduct.map((product)=>(<li key={product.id} className="flex py-7">
                                 <div className="flex-shrink-0">
-                                    <img className="object-cover w-16 h-16 rounded-lg" src={product.image} alt="" />
+                                    <img className="object-cover w-16 h-16 rounded-lg" src={product.images[0]} alt="" />
                                 </div>
 
                                 <div className="flex-1 ml-5">
@@ -43,7 +48,7 @@ export default function Cart() {
                                         </div>
 
                                         <div className="flex items-end justify-between mt-3 sm:justify-end sm:pr-14 sm:items-start sm:mt-0">
-                                            <p className="flex-shrink-0 w-20 text-base font-bold text-left text-gray-900 sm:text-right sm:order-2 sm:ml-8">${product.price}</p>
+                                            <p className="flex-shrink-0 w-20 text-base font-bold text-left text-gray-900 sm:text-right sm:order-2 sm:ml-8">{product.price}</p>
 
                                             <div className="sm:order-1">
                                                 <select name="" id="" className="block w-20 py-2 pl-4 pr-8 text-sm font-normal text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-md caret-gray-900 focus:ring-gray-900 focus:border-gray-900">

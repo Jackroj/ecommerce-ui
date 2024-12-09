@@ -16,6 +16,7 @@ export default function CheckOut()
     let navigation = useNavigate();
 
     const handleConfirm = () => {
+        window.scrollTo(0, 0);
         navigation('/confirm/order');
     }
     return (<>

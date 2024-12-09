@@ -1,7 +1,10 @@
 
-import { FeatureProduct } from "../utlis/content";
+import { useNavigate } from "react-router";
+import { FeatureProduct, AllProducts } from "../utlis/content";
 export default function FeatureItems()
 {
+    const navigation = useNavigate();
+    const ProductFilter = AllProducts;
     return (<>
     <section className="py-12 bg-white sm:py-16 lg:py-20">
     <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
@@ -12,10 +15,10 @@ export default function FeatureItems()
 
         <div className="grid grid-cols-1 gap-6 mt-12 text-center sm:grid-cols-2 lg:gap-5 lg:grid-cols-4 sm:mt-16">
       
-            {FeatureProduct.map((product) => (<div className=" bg-[#F5F5F5] overflow-hidden flex flex-col">
+            {ProductFilter.slice(0, 5).map((product) => (<div onClick={()=> {window.scrollTo(0, 0); navigation(`/view/${product.id}`)}}  className=" cursor-pointer bg-[#F5F5F5] overflow-hidden shadow-md flex flex-col">
                 <div >
                     <div className="overflow-hidden aspect-w-1 aspect-h-1">
-                        <img className="object-cover w-full h-full transition-all duration-300 group-hover:scale-110" src={product.image} alt="" />
+                        <img className="object-cover w-full h-full transition-all duration-300 group-hover:scale-110" src={product.images[0]} alt="" />
                     </div>
                     <h3 className="text-base font-bold text-gray-900">
                         <a href="#" title="">

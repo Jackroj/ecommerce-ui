@@ -1,14 +1,24 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router";
 import Layout from "./Layout";
-import { ProductDetails } from "../utlis/content";
+import { AllProducts, ProductDetails } from "../utlis/content";
 import Rating from "../Component/Ratings";
 import BreadCrumbs from "../Component/Breacrumbs";
 
 const ProductView = () => {
     let params = useParams();
-    const [imagePreview, setImagePreview] = useState(ProductDetails.images[0]);
+    const product = AllProducts.find((item) => item.id === parseInt(params.id));
+    const [imagePreview, setImagePreview] = useState({
+        id: 0,
+        src: product.images[0]
+    });
     let navigation = useNavigate();
+
+  
+
+    if (!product) {
+        return <div>Product not found!</div>;
+    }
 
     const handleAddCart = () =>{
         navigation('/cart');
@@ -33,9 +43,9 @@ const ProductView = () => {
                         <div className="flex flex-row items-stretch lg:flex-col lg:space-y-5 space-x-2.5 lg:space-x-0">
                            
 
-                           {ProductDetails.images.map((image)=><button key={image.id} onClick={()=> setImagePreview({id: image.id, src: image.src})} type="button" className="flex-1">
-                                <div className={`overflow-hidden border-2 ${imagePreview.id === image.id ? 'border-gray-900': "border-transparent"} rounded-lg aspect-w-1 aspect-h-1 sm:aspect-w-4 sm:aspect-h-3`}>
-                                    <img className="object-cover w-full h-full" src={image.src} alt="" />
+                           {product.images.map((image, index)=><button key={index} onClick={()=> setImagePreview({id: index, src: image})} type="button" className="flex-1">
+                                <div className={`overflow-hidden border-2 ${imagePreview.id === index ? 'border-gray-900': "border-transparent"} rounded-lg aspect-w-1 aspect-h-1 sm:aspect-w-4 sm:aspect-h-3`}>
+                                    <img className="object-cover w-full h-full" src={image} alt="" />
                                 </div>
                             </button>)}
 
@@ -46,19 +56,19 @@ const ProductView = () => {
             </div>
 
             <div className="lg:col-span-2 lg:row-end-2 lg:row-span-2">
-                <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">{ProductDetails.title}</h1>
+                <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">{product.title}</h1>
 
                 <div className="flex items-center mt-5">
                     <div className="flex items-center space-x-px">
                         <Rating rating={3}/>
                     </div>
-                    <p className="ml-2 text-sm font-medium text-gray-400">{ProductDetails.reviews} Reviews</p>
+                    {product.reviews && <p className="ml-2 text-sm font-medium text-gray-400">{product.reviews} Reviews</p>}
                 </div>
 
                 <div className="flex items-center mt-8">
-                    <p className="text-3xl font-bold text-gray-900">${ProductDetails.price}</p>
+                    <p className="text-3xl font-bold text-gray-900">${product.price}</p>
                     <p className="ml-2 text-2xl font-bold text-gray-500">
-                        <del> ${ProductDetails.discountPrice} </del>
+                        <del> ${product.delPrice} </del>
                     </p>
                 </div>
 

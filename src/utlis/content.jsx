@@ -77,31 +77,31 @@ export const Products = [
   export const CategoriesItem = [
     {
         id:1,
-        title: "Nafiza Diamond Jhumkas",
-        stock: '3,495',
-        image:"https://cdn.caratlane.com/media/static/images/V4/2024/Shaya/11-Nov/ClxShaya/Web/Web-Replace%20everyday%20with%20offer_.jpg",
-        type:"diamond"
+        title: "Rings",
+        stock: '1,495',
+        image:"https://cdn.caratlane.com/media/static/images/V4/2024/CL/12_DEC/others/Tile/01/Desktop_1.jpg",
+        type:"rings"
     },
     {
         id:2,
-        title: "For Women",
-        stock: '3,495',
-        image:"https://cdn.caratlane.com/media/static/images/V4/2024/CL/11_NOV/Banner/LD/01/1X.webp",
-        type:"gold"
+        title: "Bracelets",
+        stock: '2,435',
+        image:"https://cdn.caratlane.com/media/static/images/V4/2024/CL/12_DEC/others/Tile/01/Desktop_2.jpg",
+        type:"bracelets"
     },
     {
         id:3,
-        title: "For Women",
-        stock: '3,495',
-        image:"https://cdn.caratlane.com/media/static/images/V4/2024/CL/11_NOV/Banner/Solitaire/02/2X.webp",
-        type:"silver"
+        title: "Necklaces",
+        stock: '1,162',
+        image:"https://cdn.caratlane.com/media/static/images/V4/2024/CL/12_DEC/others/Tile/01/Desktop_6.jpg",
+        type:"necklace"
     },
     {
         id:4,
-        title: "For Women",
-        stock: '3,495',
-        image:"https://cdn.caratlane.com/media/static/images/V4/2024/CL/09_Sep/Banners/Mangalsutra/2x.webp",
-        type:"bronze"
+        title: "Earrings",
+        stock: '4,908',
+        image:"https://cdn.caratlane.com/media/static/images/V4/2024/CL/12_DEC/others/Tile/01/Desktop_5.jpg",
+        type:"earrings"
     },
 ];
 
@@ -226,3 +226,253 @@ export const OrderDetails =  [
   },
 ];
 
+
+export const AllProducts = [
+  {
+    id:1,
+    title: "Glistening Promise Diamond Ring",
+    price:"₹72,973",
+    delPrice: "₹85,102",
+    category: "Ring",
+    images:[
+      'https://cdn.caratlane.com/media/catalog/product/S/R/SR03705-YGP900_1_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/S/R/SR03705-YGP900_3_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/S/R/SR03705-YGP900_4_lar.jpg',
+      "https://cdn.caratlane.com/media/catalog/product/S/R/SR03705-YGP900_6_lar.jpg"
+    ]
+  },
+  {
+    id:2,
+    title: "Paris Platinum Band for Men",
+    price:"₹21,727",
+    delPrice: "",
+    category: "Ring",
+    images:[
+      'https://cdn.caratlane.com/media/catalog/product/U/R/UR00065-PT0000_1_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/R/UR00065-PT0000_3_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/R/UR00065-PT0000_4_lar.jpg',
+      "https://cdn.caratlane.com/media/catalog/product/U/R/UR00065-PT0000_6_lar.jpg"
+    ]
+  },
+  {
+    id:3,
+    title: "Kyra Halo Solitaire Ring",
+    price:"₹84,708",
+    delPrice: "₹99,375",
+    category: "Ring",
+    images:[
+      'https://cdn.caratlane.com/media/catalog/product/S/R/SR00181-WYP900_1_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/S/R/SR00181-WYP900_3_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/S/R/SR00181-WYP900_4_lar.jpg',
+      "https://cdn.caratlane.com/media/catalog/product/S/R/SR00181-WYP900_6_lar.jpg"
+    ]
+  },
+  {
+    id:4,
+    title: "Josh Solitaire Ring for Men",
+    price:"₹64,677",
+    delPrice: "",
+    category: "Ring",
+    images:[
+      'https://cdn.caratlane.com/media/catalog/product/S/R/SR02225-YGP900_1_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/S/R/SR02225-YGP900_3_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/S/R/SR02225-YGP900_5_lar.jpg',
+      "https://cdn.caratlane.com/media/catalog/product/S/R/SR00181-WYP900_6_lar.jpg"
+    ]
+  },
+  {
+    id:5,
+    title: "Citric Sparkle Diamond Ring",
+    price:"₹56,981",
+    delPrice: "₹62,837",
+    category: "Ring",
+    images:[
+      'https://cdn.caratlane.com/media/catalog/product/J/R/JR00595-YGP600_1_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/J/R/JR00595-YGP600_3_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/J/R/JR00595-YGP600_4_lar.jpg',
+      "https://cdn.caratlane.com/media/catalog/product/J/R/JR00595-YGP600_6_lar.jpg"
+    ]
+  },
+  {
+    id:6,
+    title: "Magnificent Lotus Pearl Drop Earrings",
+    price:"₹40,442",
+    delPrice: "₹42,924",
+    category: "pearl drop earrings",
+    images:[
+      'https://cdn.caratlane.com/media/catalog/product/J/E/JE05896-YGP9P0_1_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/J/E/JE05896-YGP9P0_3_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/J/E/JE05896-YGP9P0_4_lar.jpg',
+      "https://cdn.caratlane.com/media/catalog/product/J/E/JE05896-YGP9P0_6_lar.jpg"
+    ]
+  },
+  {
+    id:7,
+    title: "Duo Pearl Sui Dhaga Earrings",
+    price:"₹11,431",
+    delPrice: "",
+    category: "pearl sui dhaga earrings",
+    images:[
+      'https://cdn.caratlane.com/media/catalog/product/U/E/UE06672-1Y00P0_1_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/E/UE06672-1Y00P0_3_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/E/UE06672-1Y00P0_4_lar.jpg',
+      "https://cdn.caratlane.com/media/catalog/product/U/E/UE06672-1Y00P0_6_lar.jpg"
+    ]
+  },
+  {
+    id:8,
+    title: "Swerve Leaf Pearl Drop Earrings",
+    price:"₹28,837",
+    delPrice: "",
+    category: "pearl drop earrings",
+    images:[
+      'https://cdn.caratlane.com/media/catalog/product/U/E/UE04626-YG00P0_1_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/E/UE04626-YG00P0_3_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/E/UE04626-YG00P0_4_lar.jpg',
+      "https://cdn.caratlane.com/media/catalog/product/U/E/UE04626-YG00P0_6_lar.jpg"
+    ]
+  },
+  {
+    id:9,
+    title: "Duo Pearl Sui Dhaga Earrings",
+    price:"₹11,431",
+    delPrice: "",
+    category: "pearl sui dhaga earrings",
+    images:[
+      'https://cdn.caratlane.com/media/catalog/product/U/E/UE06672-1Y00P0_1_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/E/UE06672-1Y00P0_3_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/E/UE06672-1Y00P0_4_lar.jpg',
+      "https://cdn.caratlane.com/media/catalog/product/U/E/UE06672-1Y00P0_6_lar.jpg"
+    ]
+  },
+  {
+    id:10,
+    title: "Pearl Golden Snitch Earcuffs",
+    price:"₹9,043",
+    delPrice: "₹9,996",
+    category: "pearl golden snitch earcuffs",
+    images:[
+      'https://cdn.caratlane.com/media/catalog/product/U/E/UE06343-1Y00P0_1_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/E/UE06343-1Y00P0_3_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/E/UE06343-1Y00P0_4_lar.jpg',
+      "https://cdn.caratlane.com/media/catalog/product/U/E/UE06343-1Y00P0_6_lar.jpg"
+    ]
+  },
+  {
+    id:11,
+    title: "Champion's Choice Platinum Bracelet for Men",
+    price:"₹1,63,995",
+    delPrice: "₹1,72,615",
+    category: "platinum bracelet",
+    images:[
+      'https://cdn.caratlane.com/media/catalog/product/U/E/UE06343-1Y00P0_1_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/E/UE06343-1Y00P0_3_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/E/UE06343-1Y00P0_4_lar.jpg',
+      "https://cdn.caratlane.com/media/catalog/product/U/E/UE06343-1Y00P0_6_lar.jpg"
+    ]
+  },
+  {
+    id:12,
+    title: "Beyond Infinity Personalised Gemstone Bracelet",
+    price:"₹13,042",
+    delPrice: "",
+    category: "gemstone bracelet",
+    images:[
+      'https://cdn.caratlane.com/media/catalog/product/U/T/UT00867-1Y00P0_1_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/T/UT00867-1Y00P0_3_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/T/UT00867-1Y00P0_pdstatic.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/T/UT00867-1Y00P0_5_lar.jpg',
+    ]
+  },
+  {
+    id:13,
+    title: "Aisha Cutout Charm Pearl Bracelet",
+    price:"₹16,864",
+    delPrice: "",
+    category: "charm pearl bracelet",
+    images:[
+      'https://cdn.caratlane.com/media/catalog/product/U/T/UT00650-YG00P0_1_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/T/UT00650-YG00P0_3_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/T/UT00650-YG00P0_4_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/T/UT00650-YG00P0_6_lar.jpg',
+    ]
+  },
+  {
+    id:14,
+    title: "Elle Interlooped Cutout Gold Bracelet",
+    price:"₹21,598",
+    delPrice: "",
+    category: "cutout gold bracelet",
+    images:[
+      'https://cdn.caratlane.com/media/catalog/product/U/T/UT00016-YG0000_1_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/T/UT00016-YG0000_3_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/T/UT00016-YG0000_4_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/T/UT00016-YG0000_6_lar.jpg',
+    ]
+  },
+  {
+    id:15,
+    title: "Disney's Lion King Simba & Paw Colourtsone Chain Bracelet",
+    price:"₹21,438",
+    delPrice: "",
+    category: "colourtsone chain bracelet",
+    images:[
+      'https://cdn.caratlane.com/media/catalog/product/U/T/UT02083-1Y00OO_1_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/T/UT02083-1Y00OO_3_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/T/UT02083-1Y00OO_4_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/U/T/UT02083-1Y00OO_6_lar.jpg',
+    ]
+  },
+  {
+    id:16,
+    title: "Graduating Quarter Solitaire Necklace",
+    price:"₹6,70,071",
+    delPrice: "₹7,90,307",
+    category: "solitaire necklace",
+    images:[
+      'https://cdn.caratlane.com/media/catalog/product/S/L/SL00020-WGP900_1_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/S/L/SL00020-WGP900_2_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/S/L/SL00020-WGP900_3_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/S/L/SL00020-WGP900_4_lar.jpg',
+    ]
+  },
+  {
+    id:17,
+    title: "Dazzled Solitaire Necklace",
+    price:"₹13,29,677",
+    delPrice: "₹7,90,307",
+    category: "solitaire necklace",
+    images:[
+      'https://cdn.caratlane.com/media/catalog/product/S/L/SL00028-YGP900_1_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/S/L/SL00028-YGP900_2_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/S/L/SL00028-YGP900_3_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/S/L/SL00028-YGP900_4_lar.jpg',
+    ]
+  },
+  {
+    id:18,
+    title: "Graduating Illusion Solitaire Necklace",
+    price:"₹4,98,676",
+    delPrice: "",
+    category: "solitaire necklace",
+    images:[
+      'https://cdn.caratlane.com/media/catalog/product/S/L/SL00021-WGP900_1_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/S/L/SL00021-WGP900_2_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/S/L/SL00021-WGP900_3_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/S/L/SL00021-WGP900_6_lar.jpg',
+    ]
+  },
+  {
+    id:19,
+    title: "Single Line Graduating Solitaire Necklace",
+    price:"₹11,56,771",
+    delPrice: "",
+    category: "solitaire necklace",
+    images:[
+      'https://cdn.caratlane.com/media/catalog/product/S/L/SL00014-WGP900_1_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/S/L/SL00014-WGP900_2_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/S/L/SL00014-WGP900_3_lar.jpg',
+      'https://cdn.caratlane.com/media/catalog/product/S/L/SL00014-WGP900_5_lar.jpg',
+    ]
+  }
+]
