@@ -65,7 +65,7 @@ const ProductView = () => {
         <section className="py-12 bg-gray-50 sm:py-16">
     <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
        
-    <BreadCrumbs/>
+    <BreadCrumbs path={product.category}/>
         <div className="grid grid-cols-1 mt-8 lg:grid-rows-1 gap-y-12 lg:mt-12 lg:grid-cols-5 lg:gap-y-16 lg:gap-x-12 xl:gap-x-16">
             <div className="lg:col-span-3 lg:row-end-1">
                 <div className="lg:flex lg:items-start">
