@@ -15,6 +15,7 @@ export default function Cart() {
     let navigation = useNavigate();
 
     const handleCheckOut = () => {
+        window.scrollTo(0, 0);
         navigation('/checkout');
     }
     filteredProduct = AllProducts.slice(3, 8);

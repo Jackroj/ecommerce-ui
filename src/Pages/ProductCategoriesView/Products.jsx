@@ -29,7 +29,7 @@ export default function Products({type}) {
                     </h3>
                     <p className="flex-1 mt-3 text-base font-bold text-gray-500">{product.price}</p>
                     <del>{product.delPrice}</del>
-                    <button type="button" onClick={()=> navigation('/cart')} className="inline-flex items-center justify-center px-6 py-3 mt-6 text-sm font-bold text-white transition-all duration-200 bg-gray-900 rounded-md sm:px-12 focus:outline-none hover:bg-gray-700">Buy Now</button>
+                    <button type="button" onClick={()=> {window.scrollTo(0, 0); navigation('/cart')}} className="inline-flex items-center justify-center px-6 py-3 mt-6 text-sm font-bold text-white transition-all duration-200 bg-gray-900 rounded-md sm:px-12 focus:outline-none hover:bg-gray-700">Buy Now</button>
                 </div>
             </div>))}
 
