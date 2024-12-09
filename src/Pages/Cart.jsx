@@ -2,8 +2,9 @@ import { useNavigate } from "react-router";
 import PriceLabel from "../Component/PriceLabel";
 import { CartItems, AllProducts } from "../utlis/content";
 import Layout from "./Layout";
+import { parsePrice } from "../utlis/helper";
 
-const parsePrice = (price) => parseFloat(price.replace(/[₹,]/g, ""));
+
 
 export default function Cart() {
     let filteredProduct = [];

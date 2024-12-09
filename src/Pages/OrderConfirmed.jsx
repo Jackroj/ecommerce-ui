@@ -1,7 +1,14 @@
+import { AllProducts } from "../utlis/content";
+import PriceLabel from "../Component/PriceLabel";
 import Layout from "./Layout";
+import { parsePrice } from "../utlis/helper";
 
 export default function OrderConfirmed()
 {
+    let OrderedProducts= [];
+    const subtotal = AllProducts.reduce((total, item) => total + parsePrice(item.price), 0);
+    const total = subtotal;
+    OrderedProducts = AllProducts.slice(3,8);
     return (<>
     <Layout>
     <section className="py-12 bg-gray-50 sm:py-16 lg:py-20">
@@ -105,71 +112,30 @@ export default function OrderConfirmed()
 
                             <div className="flow-root mt-8">
                                 <ul className="divide-y divide-gray-200 -my-7">
-                                    <li className="flex items-start justify-between space-x-5 py-7 md:items-stretch">
+                                   {OrderedProducts.map((product)=>( <li key={product.id} className="flex items-start justify-between space-x-5 py-7 md:items-stretch">
                                         <div className="flex items-stretch">
                                             <div className="flex-shrink-0">
-                                                <img className="object-cover w-20 h-20 rounded-lg" src="https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/order-confirmation/3/product-1.png" alt="" />
+                                                <img className="object-cover w-20 h-20 rounded-lg" src={product.images[0]} alt="" />
                                             </div>
 
                                             <div className="flex flex-col justify-between ml-5 w-44">
-                                                <p className="flex-1 text-sm font-bold text-gray-900">Apple Watch Series 7 - 44mm</p>
-                                                <p className="mt-1.5 text-sm font-medium text-gray-500">Golden</p>
+                                                <p className="flex-1 text-sm font-bold text-gray-900">{product.title}</p>
+                                                <p className="mt-1.5 text-sm font-medium text-gray-500">{product.category}</p>
                                             </div>
                                         </div>
 
                                         <div className="ml-auto">
-                                            <p className="text-sm font-bold text-right text-gray-900">$259.00</p>
+                                            <p className="text-sm font-bold text-right text-gray-900">{product.price}</p>
                                         </div>
-                                    </li>
-
-                                    <li className="flex items-start justify-between space-x-5 py-7 md:items-stretch">
-                                        <div className="flex items-stretch">
-                                            <div className="flex-shrink-0">
-                                                <img className="object-cover w-20 h-20 rounded-lg" src="https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/order-confirmation/3/product-2.png" alt="" />
-                                            </div>
-
-                                            <div className="flex flex-col justify-between ml-5 w-44">
-                                                <p className="flex-1 text-sm font-bold text-gray-900">Beylob 90 Speaker</p>
-                                                <p className="mt-1.5 text-sm font-medium text-gray-500">Space Gray</p>
-                                            </div>
-                                        </div>
-
-                                        <div className="ml-auto">
-                                            <p className="text-sm font-bold text-right text-gray-900">$99.00</p>
-                                        </div>
-                                    </li>
-
-                                    <li className="flex items-start justify-between space-x-5 py-7 md:items-stretch">
-                                        <div className="flex items-stretch">
-                                            <div className="flex-shrink-0">
-                                                <img className="object-cover w-20 h-20 rounded-lg" src="https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/order-confirmation/3/product-3.png" alt="" />
-                                            </div>
-
-                                            <div className="flex flex-col justify-between ml-5 w-44">
-                                                <p className="flex-1 text-sm font-bold text-gray-900">Beoplay M5 Bluetooth Speaker</p>
-                                                <p className="mt-1.5 text-sm font-medium text-gray-500">Silver Collection</p>
-                                            </div>
-                                        </div>
-
-                                        <div className="ml-auto">
-                                            <p className="text-sm font-bold text-right text-gray-900">$129.00</p>
-                                        </div>
-                                    </li>
+                                    </li>))}
                                 </ul>
                             </div>
                         </div>
 
                         <div className="py-8">
                             <ul className="space-y-4">
-                                <li className="flex items-center justify-between">
-                                    <p className="text-sm font-medium text-gray-600">Sub total</p>
-                                    <p className="text-sm font-medium text-gray-600">$699</p>
-                                </li>
-
-                                <li className="flex items-center justify-between">
-                                    <p className="text-sm font-medium text-gray-900">Total</p>
-                                    <p className="text-sm font-bold text-gray-900">$699</p>
-                                </li>
+                                    <PriceLabel text={'Subtotal'} price={subtotal}/>
+                                    <PriceLabel text={'Total'} price={total.toFixed(2)}/>
                             </ul>
                         </div>
                     </div>

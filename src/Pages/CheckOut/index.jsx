@@ -1,15 +1,16 @@
 import { useNavigate } from "react-router";
 import PriceLabel from "../../Component/PriceLabel";
-import { OrderDetails } from "../../utlis/content";
+import { AllProducts, OrderDetails } from "../../utlis/content";
 import Layout from "../Layout";
 import ContactForm from "./ContactForm";
 import ShippingForm from "./ShippingForm";
 import PaymentForm from "./PaymentForm";
+import { parsePrice } from "../../utlis/helper";
 
 export default function CheckOut()
 {
-
-    const subtotal = OrderDetails.reduce((total, item) => total + item.price * item.no_of_items, 0);
+    let filteredOrder = [];
+    const subtotal = AllProducts.reduce((total, item) => total + parsePrice(item.price), 0);
     const tax = 0; 
     const shipping = 10;
     const total = subtotal + tax + shipping;
@@ -19,6 +20,7 @@ export default function CheckOut()
         window.scrollTo(0, 0);
         navigation('/confirm/order');
     }
+    filteredOrder = AllProducts.slice(3, 8)
     return (<>
     <Layout>
     <section className="py-12 bg-white sm:py-16 lg:py-20">
@@ -37,9 +39,9 @@ export default function CheckOut()
                             <div className="flow-root mt-8">
                                 <ul className="divide-y divide-gray-200 -my-7">
 
-                                    {OrderDetails.map((product) => (<li key={product.id} className="flex items-stretch justify-between space-x-5 py-7">
+                                    {filteredOrder.map((product) => (<li key={product.id} className="flex items-stretch justify-between space-x-5 py-7">
                                         <div className="flex-shrink-0">
-                                            <img className="object-cover w-16 h-16 rounded-lg" src={product.image} alt="" />
+                                            <img className="object-cover w-16 h-16 rounded-lg" src={product.images[0]} alt="" />
                                         </div>
 
                                         <div className="flex flex-col justify-between flex-1 ml-5">
@@ -47,7 +49,7 @@ export default function CheckOut()
                                                 <p className="text-base font-bold text-gray-900">{product.title}</p>
                                                 <p className="mt-1 text-sm font-medium text-gray-500">{product.category}</p>
                                             </div>
-                                            <p className="mt-2 text-sm font-bold text-gray-900">${product.price}</p>
+                                            <p className="mt-2 text-sm font-bold text-gray-900">{product.price}</p>
                                         </div>
 
                                         <div className="ml-auto">

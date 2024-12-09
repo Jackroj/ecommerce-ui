@@ -9,3 +9,5 @@ export function toCamelCase(str) {
         })
         .join(''); // Join the words back together
 }
+
+export const parsePrice = (price) => parseFloat(price.replace(/[₹,]/g, ""));
